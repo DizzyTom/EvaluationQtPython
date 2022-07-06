@@ -1,0 +1,35 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>res/icons/点击.png</file>
+    <file>res/icons/重复片检索.png</file>
+    <file>res/icons/边界显示资源 21.png</file>
+    <file>res/icons/垂直测量资源 12.png</file>
+    <file>res/icons/多点画边界资源 22.png</file>
+    <file>res/icons/放大资源 2.png</file>
+    <file>res/icons/功能退出资源 20.png</file>
+    <file>res/icons/灰度曲线增强资源 26.png</file>
+    <file>res/icons/恢复原始曲线资源 27.png</file>
+    <file>res/icons/局部放大资源 6.png</file>
+    <file>res/icons/局部增强资源 28.png</file>
+    <file>res/icons/连续画边界资源 23.png</file>
+    <file>res/icons/密度评定10资源 16.png</file>
+    <file>res/icons/密度评定20资源 17.png</file>
+    <file>res/icons/密度评定30资源 18.png</file>
+    <file>res/icons/密度评定资源 19.png</file>
+    <file>res/icons/倾侧测量资源 13.png</file>
+    <file>res/icons/缺陷手动定位资源 9.png</file>
+    <file>res/icons/任务获取资源 1.png</file>
+    <file>res/icons/上下翻转资源 8.png</file>
+    <file>res/icons/适应屏幕资源 5.png</file>
+    <file>res/icons/水平测量资源 11.png</file>
+    <file>res/icons/缩小资源 3.png</file>
+    <file>res/icons/伪色彩增强资源 25.png</file>
+    <file>res/icons/文字识别资源 29.png</file>
+    <file>res/icons/信息标记资源 10.png</file>
+    <file>res/icons/一键增强资源 24.png</file>
+    <file>res/icons/移动资源 14.png</file>
+    <file>res/icons/原图大小资源 4.png</file>
+    <file>res/icons/中心标记资源 15.png</file>
+    <file>res/icons/左右翻转资源 7.png</file>
+  </qresource>
+</RCC>
