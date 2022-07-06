@@ -15,40 +15,33 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QListWidget, QListWidgetItem, QMainWindow, QPushButton,
-    QScrollArea, QSizePolicy, QSpacerItem, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGraphicsView,
+    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
+    QLineEdit, QListWidget, QListWidgetItem, QMainWindow,
+    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
 import resource_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1680, 1050)
+        MainWindow.resize(1680, 1002)
         MainWindow.setMinimumSize(QSize(0, 20))
+        icon = QIcon()
+        icon.addFile(u":/icons/res/icons/\u8ba1\u7b97\u673a.png", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(1)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.title = QWidget(self.centralwidget)
-        self.title.setObjectName(u"title")
+        self.menubar = QWidget(self.centralwidget)
+        self.menubar.setObjectName(u"menubar")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.title.sizePolicy().hasHeightForWidth())
-        self.title.setSizePolicy(sizePolicy)
-        self.title.setMinimumSize(QSize(0, 20))
-        self.title.setMaximumSize(QSize(16777215, 20))
-        self.title.setStyleSheet(u"background-color: rgb(22, 78, 134);")
-
-        self.verticalLayout.addWidget(self.title)
-
-        self.menubar = QWidget(self.centralwidget)
-        self.menubar.setObjectName(u"menubar")
         sizePolicy.setHeightForWidth(self.menubar.sizePolicy().hasHeightForWidth())
         self.menubar.setSizePolicy(sizePolicy)
         self.menubar.setMinimumSize(QSize(0, 20))
@@ -551,6 +544,19 @@ class Ui_MainWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.widget_4 = QWidget(self.mainArea)
         self.widget_4.setObjectName(u"widget_4")
+        self.widget_4.setMinimumSize(QSize(0, 470))
+        self.widget_4.setMaximumSize(QSize(16777215, 470))
+        self.gridLayout_19 = QGridLayout(self.widget_4)
+        self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.graphicsView = QGraphicsView(self.widget_4)
+        self.graphicsView.setObjectName(u"graphicsView")
+        self.graphicsView.setMinimumSize(QSize(0, 470))
+        self.graphicsView.setMaximumSize(QSize(16777215, 470))
+        self.graphicsView.setStyleSheet(u"background-color:transparent;\n"
+"border:none;")
+
+        self.gridLayout_19.addWidget(self.graphicsView, 0, 0, 1, 1)
+
 
         self.gridLayout.addWidget(self.widget_4, 1, 1, 1, 2)
 
@@ -604,8 +610,8 @@ class Ui_MainWindow(object):
 
         self.frame_31 = QFrame(self.mainArea)
         self.frame_31.setObjectName(u"frame_31")
-        self.frame_31.setMinimumSize(QSize(910, 0))
-        self.frame_31.setMaximumSize(QSize(910, 16777215))
+        self.frame_31.setMinimumSize(QSize(910, 316))
+        self.frame_31.setMaximumSize(QSize(910, 316))
 
         self.gridLayout.addWidget(self.frame_31, 0, 1, 1, 1)
 
@@ -790,8 +796,11 @@ class Ui_MainWindow(object):
 
         self.frame_5 = QFrame(self.mainArea)
         self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setMinimumSize(QSize(0, 316))
+        self.frame_5.setMaximumSize(QSize(16777215, 316))
         self.gridLayout_18 = QGridLayout(self.frame_5)
         self.gridLayout_18.setObjectName(u"gridLayout_18")
+        self.gridLayout_18.setContentsMargins(0, 0, 0, 0)
         self.label_43 = QLabel(self.frame_5)
         self.label_43.setObjectName(u"label_43")
         self.label_43.setMinimumSize(QSize(0, 24))
@@ -976,7 +985,10 @@ class Ui_MainWindow(object):
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"/*\u8868\u5934*/\n"
+        self.tableWidget.setStyleSheet(u"QTableWidget{\n"
+"border:none;\n"
+"}\n"
+"/*\u8868\u5934*/\n"
 "QHeaderView::section{\n"
 "text-align:center;\n"
 "padding:3px;\n"
@@ -1020,11 +1032,11 @@ class Ui_MainWindow(object):
 "\u6ed1\u5757\u5df2\u7ecf\u5212\u8fc7\u7684\u533a\u57df*/\n"
 "QScrollBar::sub-page:vertical{\n"
 "background:444444;\n"
-"}\n"
+""
+                        "}\n"
 "\n"
 "/*\n"
-"\u6ed1\u5757\u8fd8\u6ca1"
-                        "\u6709\u5212\u8fc7\u7684\u533a\u57df*/\n"
+"\u6ed1\u5757\u8fd8\u6ca1\u6709\u5212\u8fc7\u7684\u533a\u57df*/\n"
 "QScrollBar::add-page:vertical{\n"
 "background:5B5B5B;\n"
 "}\n"
@@ -1056,6 +1068,7 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.statebar.sizePolicy().hasHeightForWidth())
         self.statebar.setSizePolicy(sizePolicy2)
         self.statebar.setMinimumSize(QSize(0, 30))
+        self.statebar.setStyleSheet(u"background-color: rgb(22, 78, 134);")
 
         self.verticalLayout.addWidget(self.statebar)
 
@@ -1067,7 +1080,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u8bc4\u7247", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u914d\u7f6e", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u5177", None))

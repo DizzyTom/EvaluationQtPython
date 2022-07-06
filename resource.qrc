@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res/icons/计算机.png</file>
     <file>res/icons/点击.png</file>
     <file>res/icons/重复片检索.png</file>
     <file>res/icons/边界显示资源 21.png</file>
