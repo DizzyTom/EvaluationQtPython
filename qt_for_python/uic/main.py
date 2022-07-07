@@ -1017,31 +1017,7 @@ class Ui_MainWindow(object):
         self.pageViewImage = QWidget()
         self.pageViewImage.setObjectName(u"pageViewImage")
         self.gridLayout = QGridLayout(self.pageViewImage)
-        self.gridLayout.setSpacing(6)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(9, 9, 9, 9)
-        self.widget_4 = QWidget(self.pageViewImage)
-        self.widget_4.setObjectName(u"widget_4")
-        self.widget_4.setMinimumSize(QSize(0, 470))
-        self.widget_4.setMaximumSize(QSize(16777215, 16777215))
-        self.widget_4.setStyleSheet(u"background-color: #169BD5;")
-        self.gridLayout_19 = QGridLayout(self.widget_4)
-        self.gridLayout_19.setObjectName(u"gridLayout_19")
-        self.gridLayout_19.setHorizontalSpacing(3)
-        self.gridLayout_19.setVerticalSpacing(6)
-        self.gridLayout_19.setContentsMargins(3, 3, 3, 3)
-        self.graphicsView = ImageViewer(self.widget_4)
-        self.graphicsView.setObjectName(u"graphicsView")
-        self.graphicsView.setMinimumSize(QSize(0, 470))
-        self.graphicsView.setMaximumSize(QSize(16777215, 16777215))
-        self.graphicsView.setStyleSheet(u"background-color:rgb(255, 255, 255);\n"
-"border:none;")
-
-        self.gridLayout_19.addWidget(self.graphicsView, 0, 0, 1, 1)
-
-
-        self.gridLayout.addWidget(self.widget_4, 1, 1, 1, 2)
-
         self.frame_21 = QFrame(self.pageViewImage)
         self.frame_21.setObjectName(u"frame_21")
         self.frame_21.setMinimumSize(QSize(330, 0))
@@ -1069,7 +1045,7 @@ class Ui_MainWindow(object):
         self.tableWidgetFiles.setObjectName(u"tableWidgetFiles")
         sizePolicy.setHeightForWidth(self.tableWidgetFiles.sizePolicy().hasHeightForWidth())
         self.tableWidgetFiles.setSizePolicy(sizePolicy)
-        self.tableWidgetFiles.setMinimumSize(QSize(0, 0))
+        self.tableWidgetFiles.setMinimumSize(QSize(600, 0))
         self.tableWidgetFiles.setMaximumSize(QSize(16777215, 16777215))
         self.tableWidgetFiles.setStyleSheet(u"QTableWidget{\n"
 "border:none;\n"
@@ -1132,7 +1108,37 @@ class Ui_MainWindow(object):
         self.gridLayout_14.addWidget(self.tableWidgetFiles, 0, 0, 1, 2)
 
 
-        self.gridLayout.addWidget(self.frame_21, 0, 0, 2, 1)
+        self.gridLayout.addWidget(self.frame_21, 0, 0, 1, 1)
+
+        self.widget_4 = QWidget(self.pageViewImage)
+        self.widget_4.setObjectName(u"widget_4")
+        self.widget_4.setMinimumSize(QSize(0, 470))
+        self.widget_4.setMaximumSize(QSize(16777215, 16777215))
+        self.widget_4.setStyleSheet(u"background-color: #169BD5;")
+        self.gridLayout_19 = QGridLayout(self.widget_4)
+        self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.gridLayout_19.setHorizontalSpacing(3)
+        self.gridLayout_19.setVerticalSpacing(6)
+        self.gridLayout_19.setContentsMargins(3, 3, 3, 3)
+        self.graphicsView = ImageViewer(self.widget_4)
+        self.graphicsView.setObjectName(u"graphicsView")
+        self.graphicsView.setMinimumSize(QSize(0, 470))
+        self.graphicsView.setMaximumSize(QSize(16777215, 16777215))
+        self.graphicsView.setStyleSheet(u"background-color:rgb(255, 255, 255);\n"
+"border:none;")
+
+        self.gridLayout_19.addWidget(self.graphicsView, 1, 0, 1, 1)
+
+        self.frame_6 = QFrame(self.widget_4)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setMinimumSize(QSize(0, 316))
+        self.frame_6.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_6.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+
+        self.gridLayout_19.addWidget(self.frame_6, 0, 0, 1, 1)
+
+
+        self.gridLayout.addWidget(self.widget_4, 0, 1, 1, 1)
 
         self.mainArea.addTab(self.pageViewImage, "")
         self.pageDefect = QWidget()
@@ -1561,14 +1567,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_21.addWidget(self.frame_5, 0, 1, 1, 1)
 
-        self.frame_6 = QFrame(self.pageDefect)
-        self.frame_6.setObjectName(u"frame_6")
-        self.frame_6.setMinimumSize(QSize(0, 316))
-        self.frame_6.setMaximumSize(QSize(16777215, 16777215))
-        self.frame_6.setStyleSheet(u"background-color: rgb(255, 255, 255);")
-
-        self.gridLayout_21.addWidget(self.frame_6, 1, 1, 1, 1)
-
         self.mainArea.addTab(self.pageDefect, "")
 
         self.verticalLayout.addWidget(self.mainArea)
@@ -1578,7 +1576,23 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.statebar.sizePolicy().hasHeightForWidth())
         self.statebar.setSizePolicy(sizePolicy2)
         self.statebar.setMinimumSize(QSize(0, 30))
-        self.statebar.setStyleSheet(u"background-color: rgb(22, 78, 134);")
+        self.statebar.setStyleSheet(u"background-color: rgb(22, 78, 134);\n"
+"color:#FFFFFF;")
+        self.gridLayout_27 = QGridLayout(self.statebar)
+        self.gridLayout_27.setSpacing(0)
+        self.gridLayout_27.setObjectName(u"gridLayout_27")
+        self.gridLayout_27.setContentsMargins(0, 0, 0, 0)
+        self.statePathNow = QLabel(self.statebar)
+        self.statePathNow.setObjectName(u"statePathNow")
+
+        self.gridLayout_27.addWidget(self.statePathNow, 0, 1, 1, 1)
+
+        self.label_52 = QLabel(self.statebar)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setMaximumSize(QSize(80, 16777215))
+
+        self.gridLayout_27.addWidget(self.label_52, 0, 0, 1, 1)
+
 
         self.verticalLayout.addWidget(self.statebar)
 
@@ -1705,5 +1719,7 @@ class Ui_MainWindow(object):
         self.comboBox_7.setItemText(1, QCoreApplication.translate("MainWindow", u"\u662f", None))
 
         self.mainArea.setTabText(self.mainArea.indexOf(self.pageDefect), QCoreApplication.translate("MainWindow", u"\u7f3a\u9677\u4fe1\u606f", None))
+        self.statePathNow.setText("")
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"\u5f53\u524d\u56fe\u50cf\u8def\u5f84", None))
     # retranslateUi
 

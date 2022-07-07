@@ -6,4 +6,6 @@ class ClientRequests:
     searchTask="ScanTask/SearchTask/"
     getTaskInfo="ScanTask/GetTaskInfo/"
     searchFilms="ScanTask/SearchFilms/"
+    getTaskTableHeaderNames="ScanTask/GetTaskTableHeaderNames/"
+    getFilmTableHeaderNames="ScanTask/GetFilmTableHeaderNames/"
     

@@ -53,7 +53,7 @@ class MainWindow(QMainWindow):
         self.ui.pushButtonConfig.setMenu(self.menuConfig)
 
     def setActions(self):
-        self.ui.actionOpen.triggered.connect(self.openFiles)
+        self.ui.actionOpen.triggered.connect(lambda:self.openFiles())
 
     def openFiles(self,files=None):
         if files is None:
@@ -90,6 +90,7 @@ class MainWindow(QMainWindow):
             QMessageBox(QMessageBox.Critical, '错误', '文件不存在').exec()
             return
         image=tiff_force_8bit(Image.open(path))
+        self.ui.statePathNow.setText(path)
         self.ui.graphicsView.setImage(image)
     # Operations for Database
     def setDatabaseTasks(self):
@@ -125,6 +126,7 @@ class MainWindow(QMainWindow):
                 # print(row)
                 self.ui.tableWidgetFilms.setRowCount(self.ui.tableWidgetFilms.rowCount() + 1)
                 for i, colName in enumerate(self.tableHeaderFilms):
+                    # print(colName)
                     if colName is  None:
                         self.ui.tableWidgetFilms.setItem(
                             self.ui.tableWidgetFilms.rowCount() - 1,
@@ -132,54 +134,42 @@ class MainWindow(QMainWindow):
                             QTableWidgetItem(str(self.ui.tableWidgetFilms.rowCount())),
                         )
                     else:
+                        cntt=row.get(colName, None)
+                        cntt='' if cntt is None else str(cntt)
                         if colName=="FILMLJ":
-                            filePaths.append(str(row.get(colName, None)))
+                            filePaths.append(cntt)
                         self.ui.tableWidgetFilms.setItem(
                             self.ui.tableWidgetFilms.rowCount() - 1,
                             i,
-                            QTableWidgetItem(str(row.get(colName, None))),
+                            QTableWidgetItem(cntt),
                         )
             self.ui.tableWidgetFilms.resizeColumnsToContents()
             self.ui.tableWidgetFilms.resizeRowsToContents()
             self.openFiles(files=filePaths)
 
     def addHeaderTasks(self):
-        self.tableHeaderTasks = [
-            None,
-            "QYNAME",
-            "TASKNAME",
-            "TASKNUM",
-            "FILMNUM",
-            "TASKSTATE",
-            "CREATETIME",
-            "NOTE",
-            "id",
-        ]
-        self.tableHeaderTasksName = [
-            "序号",
-            "单位名称",
-            "任务名称",
-            "任务编号",
-            "底片数量",
-            "任务状态",
-            "创建时间",
-            "备注",
-            "id",
-        ]
-        self.ui.tableWidgetTasks.setColumnCount(len(self.tableHeaderTasksName))
+        ret=requests.post(
+            webConnect.getUrl(ClientRequests.getTaskTableHeaderNames)
+        ).json()
+        self.tableHeaderTasks = [None]
+        self.tableHeaderTasksName = ['序号']
+        if ret['ret']==1:
+            for ans in ret['res']:
+                self.tableHeaderTasks.append(ans[0])
+                self.tableHeaderTasksName.append(ans[1])      
+        
+        self.ui.tableWidgetTasks.setColumnCount(len(self.tableHeaderTasks))
         self.ui.tableWidgetTasks.setHorizontalHeaderLabels(self.tableHeaderTasksName)
         # self.ui.tableWidgetTasks.setColumnHidden(self.tableHeaderTasks.index("id"),True)
-
-        self.tableHeaderFilms = [
-            None,
-            "FILMNAME",
-            "FILMHD",
-            "SCANSTATE",
-            "INFOSAVESTATE",
-            "FILMLJ",
-            "id",
-        ]
-        self.tableHeaderFilmsName = ["序号", "底片名称", "底片黑度", "扫描状态", "保存状态","底片路径","id"]
+        ret=requests.post(
+            webConnect.getUrl(ClientRequests.getFilmTableHeaderNames)
+        ).json()
+        self.tableHeaderFilms = [None]
+        self.tableHeaderFilmsName=['序号']
+        if ret['ret']==1:
+            for ans in ret['res']:
+                self.tableHeaderFilms.append(ans[0])
+                self.tableHeaderFilmsName.append(ans[1]) 
         self.ui.tableWidgetFilms.setColumnCount(len(self.tableHeaderFilms))
         self.ui.tableWidgetFilms.setHorizontalHeaderLabels(self.tableHeaderFilmsName)
 
