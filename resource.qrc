@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res/icons/关闭.png</file>
+    <file>res/icons/主页.png</file>
     <file>res/icons/logo.png</file>
     <file>res/icons/云端.png</file>
     <file>res/icons/打开.png</file>

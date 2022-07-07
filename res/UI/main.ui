@@ -266,13 +266,13 @@ image:none;
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>142</height>
+        <height>120</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>142</height>
+        <height>120</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -294,7 +294,7 @@ QFrame{background-color: rgb(255, 255, 255);border:none;}
         <number>0</number>
        </property>
        <property name="bottomMargin">
-        <number>24</number>
+        <number>0</number>
        </property>
        <item>
         <widget class="QFrame" name="frame">
@@ -526,9 +526,15 @@ QWidget{
        </item>
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>298</width>
+           <width>100</width>
            <height>16777215</height>
           </size>
          </property>
@@ -566,30 +572,9 @@ QWidget{
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="0" column="0">
-           <widget class="QWidget" name="widget_8" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>53</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>53</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_5">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
+          <item row="0" column="1">
+           <widget class="QWidget" name="widget_12" native="true">
+            <layout class="QGridLayout" name="gridLayout_10">
              <property name="topMargin">
               <number>0</number>
              </property>
@@ -599,180 +584,42 @@ QWidget{
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <property name="spacing">
-              <number>0</number>
+             <property name="horizontalSpacing">
+              <number>6</number>
              </property>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_7">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/点击.png);</string>
-               </property>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_16">
                <property name="text">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_8">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>点击</string>
+                <string>原始大小</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QWidget" name="widget_11" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>53</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>53</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_8">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <property name="spacing">
-              <number>0</number>
-             </property>
              <item row="0" column="0">
-              <widget class="QLabel" name="label_13">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
+              <widget class="QLabel" name="label_15">
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
-                 <height>35</height>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/放大资源 2.png);</string>
+                <string notr="true">image: url(:/icons/res/icons/原图大小资源 4.png);</string>
                </property>
                <property name="text">
                 <string/>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-               </property>
               </widget>
              </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_14">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>放大</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QWidget" name="widget_10" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>53</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>53</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_7">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <item row="0" column="0">
+             <item row="2" column="0">
               <widget class="QLabel" name="label_11">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -782,8 +629,8 @@ QWidget{
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
-                 <height>35</height>
+                 <width>20</width>
+                 <height>20</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -797,7 +644,7 @@ QWidget{
                </property>
               </widget>
              </item>
-             <item row="1" column="0">
+             <item row="2" column="1">
               <widget class="QLabel" name="label_12">
                <property name="maximumSize">
                 <size>
@@ -818,85 +665,26 @@ QWidget{
                </property>
               </widget>
              </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QWidget" name="widget_9" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>53</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>53</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_6">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_9">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_29">
+               <property name="maximumSize">
                 <size>
-                 <width>0</width>
-                 <height>35</height>
+                 <width>20</width>
+                 <height>20</height>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/移动资源 14.png);</string>
+                <string notr="true">image: url(:/icons/res/icons/恢复原始曲线资源 27.png);</string>
                </property>
                <property name="text">
                 <string/>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-               </property>
               </widget>
              </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_10">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_28">
                <property name="text">
-                <string>平移</string>
+                <string>原始图像</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -906,59 +694,7 @@ QWidget{
             </layout>
            </widget>
           </item>
-          <item row="0" column="4">
-           <widget class="QWidget" name="widget_12" native="true">
-            <layout class="QGridLayout" name="gridLayout_10">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_15">
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/原图大小资源 4.png);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="label_16">
-               <property name="text">
-                <string>原始大小</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_17">
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/适应屏幕资源 5.png);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLabel" name="label_18">
-               <property name="text">
-                <string>适合屏幕</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="5">
+          <item row="1" column="1">
            <widget class="QLabel" name="label_6">
             <property name="maximumSize">
              <size>
@@ -984,13 +720,13 @@ QWidget{
         <widget class="QFrame" name="frame_13">
          <property name="minimumSize">
           <size>
-           <width>225</width>
+           <width>0</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>225</width>
+           <width>150</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1131,28 +867,8 @@ QWidget{
                <property name="text">
                 <string>色彩调整</string>
                </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_29">
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">image: url(:/icons/res/icons/恢复原始曲线资源 27.png);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="label_28">
-               <property name="text">
-                <string>原始图像</string>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1177,6 +893,9 @@ QWidget{
                <property name="text">
                 <string>灰度曲线</string>
                </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
               </widget>
              </item>
              <item row="2" column="0">
@@ -1200,6 +919,9 @@ QWidget{
                <property name="text">
                 <string>局部调整</string>
                </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
               </widget>
              </item>
             </layout>
@@ -1218,6 +940,154 @@ QWidget{
             </property>
             <property name="text">
              <string>图像增强</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_7">
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	background-color: rgb(255, 255, 255);
+}
+QLabel:hover{
+	background-color: rgb(255, 255, 127);
+}
+QWidget{
+	background-color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_49">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">image: url(:/icons/res/icons/伪色彩增强资源 25.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>缺陷检测</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_38">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">image: url(:/icons/res/icons/灰度曲线增强资源 26.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_48">
+               <property name="text">
+                <string>缺陷自动定位</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_47">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">image: url(:/icons/res/icons/局部增强资源 28.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="label_36">
+               <property name="text">
+                <string>缺陷手动定位</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QLabel" name="label_35">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>缺陷识别</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1254,135 +1124,827 @@ background-color: rgb(22, 78, 134);</string>
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="mainArea" native="true">
+     <widget class="QTabWidget" name="mainArea">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">QWidget{background-color: rgb(245, 245, 245);}
 QFrame{
 background-color: rgb(255, 255, 255);
 }
+QTabWidget::pane{
+	border:none;
+}
+
+QTabWidget::tab-bar {
+    left: 1px;
+}
+QTabBar::tab {
+    background: #FFFFFF;
+	color:#169BD5;
+    border: 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    min-width: 200px;
+	min-height: 20px;
+    padding: 2px;
+}
+QTabBar::tab:selected{
+    background-color: #169BD5;
+	color:#FFFFFF;
+}
+
+
 </string>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <property name="spacing">
-        <number>2</number>
-       </property>
-       <item row="1" column="1" colspan="2">
-        <widget class="QWidget" name="widget_4" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>470</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>470</height>
-          </size>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_19">
-          <property name="leftMargin">
-           <number>0</number>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="pageStart">
+       <attribute name="title">
+        <string>开始</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QFrame" name="frame_10">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
           </property>
-          <property name="topMargin">
-           <number>0</number>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
-          <property name="rightMargin">
-           <number>0</number>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageDatabase">
+       <attribute name="title">
+        <string>数据库</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frame_8">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
           </property>
-          <property name="bottomMargin">
-           <number>0</number>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+border:none;
+}
+/*表头*/
+QHeaderView::section{
+text-align:center;
+padding:3px;
+margin:0px;
+color:rgb(0, 0, 0);
+border:0px;
+border-left-width:0;
+}
+/*QTableView 左上角样式*/
+QTableView QTableCornerButton::section {
+padding:3px;
+margin:0px;
+color:rgb(0, 0, 0);
+border:0px;
+border-left-width:0;
+}
+
+QScrollBar::vertical {
+background:transparent;
+width:8px;
+border:0px;
+}
+
+QScrollBar::handle:vertical {
+background:#6eb1f0;
+width:8px;
+}
+
+QScrollBar::add-line:vertical {
+background:none;
+border:none;
+}
+
+QScrollBar::sub-line:vertical {
+background:none;
+border:none;
+}
+
+QScrollBar::add-page:vertical {
+background:transparent;
+border:none;
+}
+
+QScrollBar::sub-page:vertical {
+background:transparent;
+border:none;
+}
+
+</string>
           </property>
-          <property name="spacing">
-           <number>0</number>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
           </property>
-          <item row="0" column="0">
-           <widget class="ImageViewer" name="graphicsView">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>470</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>470</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color:transparent;
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_24">
+           <item row="0" column="0" colspan="3">
+            <widget class="QTableWidget" name="tableWidgetTasks">
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QWidget" name="widget_3" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+border-radius:20px;
+color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);
+}
+QPushButton:hover{
+color:rgb(255,255,255);
+}
+QPushButton:pressed{
+background-color: rgb(206, 206, 206);
+}</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_17">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>12</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="addTask">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>添加任务</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="deleteTask">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>删除任务</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="modifyTask">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>修改任务</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="searchTask">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>查询任务</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QWidget" name="setWidget" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_22">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>查询设置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="blurCheckBox">
+                <property name="text">
+                 <string>模糊查询</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="timeCheckBox">
+                <property name="text">
+                 <string>无时间条件限制</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QWidget" name="timeRangeWidget" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>查询时间范围</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>起始时间</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="startTimeEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:rgb(85, 170, 255);</string>
+                </property>
+                <property name="dateTime">
+                 <datetime>
+                  <hour>0</hour>
+                  <minute>0</minute>
+                  <second>0</second>
+                  <year>2020</year>
+                  <month>1</month>
+                  <day>1</day>
+                 </datetime>
+                </property>
+                <property name="date">
+                 <date>
+                  <year>2020</year>
+                  <month>1</month>
+                  <day>1</day>
+                 </date>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>终止时间</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QDateTimeEdit" name="endTimeEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:rgb(85, 170, 255);</string>
+                </property>
+                <property name="dateTime">
+                 <datetime>
+                  <hour>0</hour>
+                  <minute>0</minute>
+                  <second>0</second>
+                  <year>2020</year>
+                  <month>1</month>
+                  <day>1</day>
+                 </datetime>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QFrame" name="conditionFrame">
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_23">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>查询条件</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>单位名称</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="companyInput">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:2px;
+border-left-width:0px;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>任务名称</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="taskNameInput">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:2px;
+border-left-width:0px;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>任务编号</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="taskNumInfo">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:2px;
+border-left-width:0px;
+}</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QFrame" name="frame_9">
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+border:none;
+}
+/*表头*/
+QHeaderView::section{
+text-align:center;
+padding:3px;
+margin:0px;
+color:rgb(0, 0, 0);
+border:0px;
+border-left-width:0;
+}
+/*QTableView 左上角样式*/
+QTableView QTableCornerButton::section {
+padding:3px;
+margin:0px;
+color:rgb(0, 0, 0);
+border:0px;
+border-left-width:0;
+}
+
+QScrollBar::vertical {
+background:transparent;
+width:8px;
+border:0px;
+}
+
+QScrollBar::handle:vertical {
+background:#6eb1f0;
+width:8px;
+}
+
+QScrollBar::add-line:vertical {
+background:none;
+border:none;
+}
+
+QScrollBar::sub-line:vertical {
+background:none;
+border:none;
+}
+
+QScrollBar::add-page:vertical {
+background:transparent;
+border:none;
+}
+
+QScrollBar::sub-page:vertical {
+background:transparent;
+border:none;
+}
+QLineEdit{
+background:transparent;
+}
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_26">
+           <item row="0" column="0" colspan="2">
+            <widget class="QTableWidget" name="tableWidgetFilms">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QWidget" name="widget_5" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+border-radius:20px;
+color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);
+}
+QPushButton:hover{
+color:rgb(255,255,255);
+}
+QPushButton:pressed{
+background-color: rgb(206, 206, 206);
+}</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_25">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>6</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="addTask_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>添加底片</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="deleteTask_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>删除底片</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="modifyTask_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>修改底片</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QPushButton" name="searchTask_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>同步底片</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="searchTask_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>查询底片</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="companyInput_2">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:2px;
+border-left-width:0px;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>查询条件</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageViewImage">
+       <attribute name="title">
+        <string>图像查看</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>9</number>
+        </property>
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item row="1" column="1" colspan="2">
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>470</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #169BD5;</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_19">
+           <property name="leftMargin">
+            <number>3</number>
+           </property>
+           <property name="topMargin">
+            <number>3</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
+           <property name="bottomMargin">
+            <number>3</number>
+           </property>
+           <property name="horizontalSpacing">
+            <number>3</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>6</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="ImageViewer" name="graphicsView">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>470</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(255, 255, 255);
 border:none;</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QFrame" name="frame_2">
-         <property name="minimumSize">
-          <size>
-           <width>330</width>
-           <height>316</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>330</width>
-           <height>316</height>
-          </size>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_14">
-          <property name="leftMargin">
-           <number>0</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QFrame" name="frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>330</width>
+            <height>0</height>
+           </size>
           </property>
-          <property name="topMargin">
-           <number>0</number>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
           </property>
-          <property name="rightMargin">
-           <number>0</number>
+          <property name="styleSheet">
+           <string notr="true"/>
           </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <property name="spacing">
-           <number>0</number>
-          </property>
-          <item row="0" column="0" colspan="2">
-           <widget class="QTableWidget" name="tableWidgetFiles">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>240</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>316</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QTableWidget{
+          <layout class="QGridLayout" name="gridLayout_14">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0" colspan="2">
+            <widget class="QTableWidget" name="tableWidgetFiles">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget{
 border:none;
 }
 /*表头*/
@@ -1434,245 +1996,85 @@ background:transparent;
 border:none;
 }
 </string>
-            </property>
-            <property name="editTriggers">
-             <set>QAbstractItemView::NoEditTriggers</set>
-            </property>
-            <property name="selectionBehavior">
-             <enum>QAbstractItemView::SelectRows</enum>
-            </property>
-            <property name="sortingEnabled">
-             <bool>true</bool>
-            </property>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="verticalHeaderStretchLastSection">
-             <bool>false</bool>
-            </attribute>
-            <row>
-             <property name="text">
-              <string>1</string>
              </property>
-            </row>
-            <column>
-             <property name="text">
-              <string>名称</string>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
              </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>路径</string>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
              </property>
-            </column>
-            <item row="0" column="0">
-             <property name="text">
-              <string>picture_name</string>
+             <property name="sortingEnabled">
+              <bool>true</bool>
              </property>
-            </item>
-            <item row="0" column="1">
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>名称</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>路径</string>
+              </property>
+             </column>
+             <item row="0" column="0">
+              <property name="text">
+               <string>picture_name</string>
+              </property>
+             </item>
+             <item row="0" column="1">
+              <property name="text">
+               <string>X:/xxxx/xxxx/xxxxxx/picture_name.mim</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageDefect">
+       <attribute name="title">
+        <string>缺陷信息</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_21">
+        <item row="0" column="0" rowspan="2">
+         <widget class="QFrame" name="frame_4">
+          <property name="minimumSize">
+           <size>
+            <width>330</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>330</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_31">
              <property name="text">
-              <string>X:/xxxx/xxxx/xxxxxx/picture_name.mim</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QFrame" name="frame_3">
-         <property name="minimumSize">
-          <size>
-           <width>910</width>
-           <height>316</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>910</width>
-           <height>316</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QFrame" name="frame">
-         <property name="minimumSize">
-          <size>
-           <width>330</width>
-           <height>470</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>330</width>
-           <height>470</height>
-          </size>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_15">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_31">
-            <property name="text">
-             <string>产品编号</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1" colspan="2">
-           <widget class="QComboBox" name="comboBox">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLineEdit" name="lineEdit_3">
-            <property name="minimumSize">
-             <size>
-              <width>138</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QLineEdit" name="lineEdit_5">
-            <property name="minimumSize">
-             <size>
-              <width>138</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_33">
-            <property name="text">
-             <string>部位编号</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="label_39">
-            <property name="text">
-             <string>执行标准</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QLabel" name="label_32">
-            <property name="text">
-             <string>焊接接头编号</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_41">
-            <property name="text">
-             <string>底片信息</string>
-            </property>
-           </widget>
-          </item>
-          <item row="8" column="0">
-           <widget class="QLabel" name="label_40">
-            <property name="text">
-             <string>拍摄级别</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_34">
-            <property name="text">
-             <string>透照日期</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLineEdit" name="lineEdit_2">
-            <property name="minimumSize">
-             <size>
-              <width>138</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0" colspan="3">
-           <widget class="QScrollArea" name="scrollArea">
-            <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: rgb(245, 245, 245);</string>
-            </property>
-            <property name="widgetResizable">
-             <bool>true</bool>
-            </property>
-            <widget class="QWidget" name="scrollAreaWidgetContents">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>312</width>
-               <height>232</height>
-              </rect>
+              <string>产品编号</string>
              </property>
             </widget>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLineEdit" name="lineEdit_4">
-            <property name="minimumSize">
-             <size>
-              <width>138</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{
+           </item>
+           <item row="7" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBox">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
 background:transparent;
 border-color:rgb(0, 0, 0);
 border-style:solid;
@@ -1682,13 +2084,19 @@ border-bottom-width:1px;
 border-left-width:0px;
 }
 </string>
-            </property>
-           </widget>
-          </item>
-          <item row="8" column="1" colspan="2">
-           <widget class="QComboBox" name="comboBox_2">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="lineEdit_3">
+             <property name="minimumSize">
+              <size>
+               <width>138</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
 background:transparent;
 border-color:rgb(0, 0, 0);
 border-style:solid;
@@ -1698,367 +2106,285 @@ border-bottom-width:1px;
 border-left-width:0px;
 }
 </string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0" colspan="3">
-           <widget class="QWidget" name="widget" native="true">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: transparent;</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_16">
-             <item row="0" column="0">
-              <widget class="QPushButton" name="pushButton_7">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-radius:10px;
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="lineEdit_5">
+             <property name="minimumSize">
+              <size>
+               <width>138</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>部位编号</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>执行标准</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="label_32">
+             <property name="text">
+              <string>焊接接头编号</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>底片信息</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>拍摄级别</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>透照日期</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="minimumSize">
+              <size>
+               <width>138</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="3">
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="styleSheet">
+              <string notr="true">border:none;
+background-color: rgb(245, 245, 245);</string>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>312</width>
+                <height>549</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="lineEdit_4">
+             <property name="minimumSize">
+              <size>
+               <width>138</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBox_2">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <widget class="QWidget" name="widget" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_16">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>28</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>28</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border-radius:10px;
 color: rgb(255, 255, 255);
-background-color: rgb(22, 155, 213);</string>
-               </property>
-               <property name="text">
-                <string>保存</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QPushButton" name="pushButton_8">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>26</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-radius:10px;
+background-color: rgb(22, 155, 213);
+}
+QPushButton:hover{
+color:rgb(255,255,255);
+}
+QPushButton:pressed{
+border-radius:10px;
 background-color: rgb(206, 206, 206);
-</string>
-               </property>
-               <property name="text">
-                <string>打开</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QFrame" name="frame_5">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>316</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>316</height>
-          </size>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_18">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_43">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>底片等级</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1" colspan="2">
-           <widget class="QComboBox" name="comboBox_6">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1" colspan="3">
-           <widget class="QComboBox" name="comboBox_3">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1" colspan="3">
-           <widget class="QComboBox" name="comboBox_4">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="3">
-           <widget class="QLabel" name="label_46">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>标记齐全</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QPushButton" name="pushButton_14">
-            <property name="minimumSize">
-             <size>
-              <width>60</width>
-              <height>26</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-radius:10px;
-background-color: rgb(22, 155, 213);
-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string>重置</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1" colspan="4">
-           <widget class="QComboBox" name="comboBox_5">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-background:transparent;
-border-color:rgb(0, 0, 0);
-border-style:solid;
-border-top-width:0px;
-border-right-width:0px;
-border-bottom-width:1px;
-border-left-width:0px;
-}
-</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_44">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>缺陷性质</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0" colspan="5">
-           <widget class="QWidget" name="widget_2" native="true">
-            <property name="styleSheet">
-             <string notr="true">background-color:transparent;</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_17">
-             <item row="0" column="0">
-              <widget class="QPushButton" name="pushButton_11">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-radius:10px;
-background-color: rgb(22, 155, 213);
-color: rgb(255, 255, 255);</string>
-               </property>
-               <property name="text">
-                <string>缺陷检测</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QPushButton" name="pushButton_12">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-radius:10px;
-background-color: rgb(22, 155, 213);
-color: rgb(255, 255, 255);</string>
-               </property>
-               <property name="text">
-                <string>缺陷自动定位</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QPushButton" name="pushButton_13">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>28</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-radius:10px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>保存</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>26</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border-radius:10px;
 color: rgb(255, 255, 255);
-background-color: rgb(22, 155, 213);</string>
-               </property>
-               <property name="text">
-                <string>缺陷手动定位</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_45">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>评片备注</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_42">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>评定标准</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="4">
-           <widget class="QPushButton" name="pushButton_15">
-            <property name="minimumSize">
-             <size>
-              <width>60</width>
-              <height>26</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-radius:10px;
 background-color: rgb(22, 155, 213);
-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string>评定</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="4">
-           <widget class="QComboBox" name="comboBox_7">
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
+}
+QPushButton:hover{
+color:rgb(255,255,255);
+}
+QPushButton:pressed{
+border-radius:10px;
+background-color: rgb(206, 206, 206);
+}</string>
+                </property>
+                <property name="text">
+                 <string>打开</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QFrame" name="frame_5">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_18">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_45">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>评片备注</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="3">
+            <widget class="QComboBox" name="comboBox_4">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
 background:transparent;
 border-color:rgb(0, 0, 0);
 border-style:solid;
@@ -2068,23 +2394,79 @@ border-bottom-width:1px;
 border-left-width:0px;
 }
 </string>
-            </property>
-            <item>
-             <property name="text">
-              <string>否</string>
              </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>是</string>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBox_6">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
              </property>
-            </item>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="5">
-           <widget class="QTableWidget" name="tableWidget">
-            <property name="styleSheet">
-             <string notr="true">QTableWidget{
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="pushButton_14">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>26</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:10px;
+background-color: rgb(22, 155, 213);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>重置</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="4">
+            <widget class="QComboBox" name="comboBox_5">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_44">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>缺陷性质</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="5">
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="styleSheet">
+              <string notr="true">QTableWidget{
 border:none;
 }
 /*表头*/
@@ -2141,60 +2523,188 @@ background:transparent;
 border:none;
 }
 </string>
-            </property>
-            <property name="showGrid">
-             <bool>true</bool>
-            </property>
-            <property name="sortingEnabled">
-             <bool>true</bool>
-            </property>
-            <attribute name="horizontalHeaderVisible">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="verticalHeaderVisible">
-             <bool>true</bool>
-            </attribute>
-            <row>
-             <property name="text">
-              <string>1</string>
              </property>
-            </row>
-            <column>
-             <property name="text">
-              <string>编号</string>
+             <property name="showGrid">
+              <bool>true</bool>
              </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>类型</string>
+             <property name="sortingEnabled">
+              <bool>true</bool>
              </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>宽度</string>
+             <attribute name="horizontalHeaderVisible">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>true</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>编号</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>类型</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>宽度</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>长度</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>定量</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>处理</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="pushButton_15">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>26</height>
+              </size>
              </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>长度</string>
+             <property name="styleSheet">
+              <string notr="true">border-radius:10px;
+background-color: rgb(22, 155, 213);
+color: rgb(255, 255, 255);</string>
              </property>
-            </column>
-            <column>
              <property name="text">
-              <string>定量</string>
+              <string>评定</string>
              </property>
-            </column>
-            <column>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_43">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
              <property name="text">
-              <string>处理</string>
+              <string>底片等级</string>
              </property>
-            </column>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-      </layout>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_46">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>标记齐全</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_42">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>评定标准</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="3">
+            <widget class="QComboBox" name="comboBox_3">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QComboBox" name="comboBox_7">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+background:transparent;
+border-color:rgb(0, 0, 0);
+border-style:solid;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:1px;
+border-left-width:0px;
+}
+</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>否</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>是</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QFrame" name="frame_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>316</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
     <item>
