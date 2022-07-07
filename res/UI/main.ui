@@ -1697,7 +1697,7 @@ background-color: rgb(206, 206, 206);
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <widget class="QPushButton" name="addTask_2">
+               <widget class="QPushButton" name="addFilm">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1713,7 +1713,7 @@ background-color: rgb(206, 206, 206);
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QPushButton" name="deleteTask_2">
+               <widget class="QPushButton" name="deleteFilm">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1729,7 +1729,7 @@ background-color: rgb(206, 206, 206);
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QPushButton" name="modifyTask_2">
+               <widget class="QPushButton" name="modifyFilm">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1745,7 +1745,7 @@ background-color: rgb(206, 206, 206);
                </widget>
               </item>
               <item row="0" column="4">
-               <widget class="QPushButton" name="searchTask_3">
+               <widget class="QPushButton" name="syncFilm">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1764,7 +1764,7 @@ background-color: rgb(206, 206, 206);
                </widget>
               </item>
               <item row="0" column="3">
-               <widget class="QPushButton" name="searchTask_2">
+               <widget class="QPushButton" name="searchFilm">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>

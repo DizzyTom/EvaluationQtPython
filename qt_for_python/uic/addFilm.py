@@ -99,9 +99,9 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"\u6dfb\u52a0\u4efb\u52a1", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"\u5355\u4f4d\u540d\u79f0", None))
-        self.label_2.setText(QCoreApplication.translate("Dialog", u"\u4efb\u52a1\u540d\u79f0", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"\u6dfb\u52a0\u5e95\u7247", None))
+        self.label.setText(QCoreApplication.translate("Dialog", u"\u5e95\u7247\u540d\u79f0", None))
+        self.label_2.setText(QCoreApplication.translate("Dialog", u"\u5e95\u7247\u9ed1\u5ea6", None))
         self.label_3.setText(QCoreApplication.translate("Dialog", u"\u4efb\u52a1\u7f16\u53f7", None))
         self.label_4.setText(QCoreApplication.translate("Dialog", u"\u5907\u6ce8", None))
         self.yesBtn.setText(QCoreApplication.translate("Dialog", u"\u786e\u5b9a", None))

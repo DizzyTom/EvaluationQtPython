@@ -5,17 +5,17 @@
     <name>Dialog</name>
     <message>
         <location filename="../../res/UI/addFilm.ui" line="14"/>
-        <source>添加任务</source>
+        <source>添加底片</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../res/UI/addFilm.ui" line="23"/>
-        <source>单位名称</source>
+        <source>底片名称</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../res/UI/addFilm.ui" line="33"/>
-        <source>任务名称</source>
+        <source>底片黑度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
