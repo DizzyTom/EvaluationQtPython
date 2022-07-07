@@ -11,15 +11,16 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGraphicsView,
-    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QListWidget, QListWidgetItem, QMainWindow,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QComboBox, QFrame,
+    QGraphicsView, QGridLayout, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QMainWindow, QPushButton,
+    QScrollArea, QSizePolicy, QSpacerItem, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
 import resource_rc
 
 class Ui_MainWindow(object):
@@ -31,6 +32,22 @@ class Ui_MainWindow(object):
         icon = QIcon()
         icon.addFile(u":/icons/res/icons/\u8ba1\u7b97\u673a.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
+        self.actionOpen = QAction(MainWindow)
+        self.actionOpen.setObjectName(u"actionOpen")
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/res/icons/\u6253\u5f00.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionOpen.setIcon(icon1)
+        self.actionOpenDatabase = QAction(MainWindow)
+        self.actionOpenDatabase.setObjectName(u"actionOpenDatabase")
+        self.actionPrintPreview = QAction(MainWindow)
+        self.actionPrintPreview.setObjectName(u"actionPrintPreview")
+        self.actionPrintConfig = QAction(MainWindow)
+        self.actionPrintConfig.setObjectName(u"actionPrintConfig")
+        self.actionCloudConnect = QAction(MainWindow)
+        self.actionCloudConnect.setObjectName(u"actionCloudConnect")
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/res/icons/\u4e91\u7aef.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionCloudConnect.setIcon(icon2)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -46,63 +63,89 @@ class Ui_MainWindow(object):
         self.menubar.setSizePolicy(sizePolicy)
         self.menubar.setMinimumSize(QSize(0, 20))
         self.menubar.setMaximumSize(QSize(16777215, 20))
-        self.menubar.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.menubar.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"")
         self.horizontalLayout = QHBoxLayout(self.menubar)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.pushButton = QPushButton(self.menubar)
-        self.pushButton.setObjectName(u"pushButton")
+        self.pushButtonFile = QPushButton(self.menubar)
+        self.pushButtonFile.setObjectName(u"pushButtonFile")
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy1)
-        self.pushButton.setMinimumSize(QSize(80, 0))
-        self.pushButton.setMaximumSize(QSize(80, 16777215))
-        self.pushButton.setStyleSheet(u"border:none")
+        sizePolicy1.setHeightForWidth(self.pushButtonFile.sizePolicy().hasHeightForWidth())
+        self.pushButtonFile.setSizePolicy(sizePolicy1)
+        self.pushButtonFile.setMinimumSize(QSize(80, 0))
+        self.pushButtonFile.setMaximumSize(QSize(80, 16777215))
+        self.pushButtonFile.setStyleSheet(u"QPushButton{\n"
+"border:none;\n"
+"}\n"
+"QPushButton::menu-indicator{\n"
+"image:none;\n"
+"}")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.pushButtonFile)
 
-        self.pushButton_2 = QPushButton(self.menubar)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        sizePolicy1.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy1)
-        self.pushButton_2.setMinimumSize(QSize(80, 0))
-        self.pushButton_2.setMaximumSize(QSize(80, 16777215))
-        self.pushButton_2.setStyleSheet(u"border:none")
+        self.pushButtonConfig = QPushButton(self.menubar)
+        self.pushButtonConfig.setObjectName(u"pushButtonConfig")
+        sizePolicy1.setHeightForWidth(self.pushButtonConfig.sizePolicy().hasHeightForWidth())
+        self.pushButtonConfig.setSizePolicy(sizePolicy1)
+        self.pushButtonConfig.setMinimumSize(QSize(80, 0))
+        self.pushButtonConfig.setMaximumSize(QSize(80, 16777215))
+        self.pushButtonConfig.setStyleSheet(u"QPushButton{\n"
+"border:none;\n"
+"}\n"
+"QPushButton::menu-indicator{\n"
+"image:none;\n"
+"}")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.pushButtonConfig)
 
-        self.pushButton_3 = QPushButton(self.menubar)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        sizePolicy1.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy1)
-        self.pushButton_3.setMinimumSize(QSize(80, 0))
-        self.pushButton_3.setMaximumSize(QSize(80, 16777215))
-        self.pushButton_3.setStyleSheet(u"border:none")
+        self.pushButtonTools = QPushButton(self.menubar)
+        self.pushButtonTools.setObjectName(u"pushButtonTools")
+        sizePolicy1.setHeightForWidth(self.pushButtonTools.sizePolicy().hasHeightForWidth())
+        self.pushButtonTools.setSizePolicy(sizePolicy1)
+        self.pushButtonTools.setMinimumSize(QSize(80, 0))
+        self.pushButtonTools.setMaximumSize(QSize(80, 16777215))
+        self.pushButtonTools.setStyleSheet(u"QPushButton{\n"
+"border:none;\n"
+"}\n"
+"QPushButton::menu-indicator{\n"
+"image:none;\n"
+"}")
 
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.horizontalLayout.addWidget(self.pushButtonTools)
 
-        self.pushButton_4 = QPushButton(self.menubar)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        sizePolicy1.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_4.setSizePolicy(sizePolicy1)
-        self.pushButton_4.setMinimumSize(QSize(80, 0))
-        self.pushButton_4.setMaximumSize(QSize(80, 16777215))
-        self.pushButton_4.setStyleSheet(u"border:none")
+        self.pushButtonView = QPushButton(self.menubar)
+        self.pushButtonView.setObjectName(u"pushButtonView")
+        sizePolicy1.setHeightForWidth(self.pushButtonView.sizePolicy().hasHeightForWidth())
+        self.pushButtonView.setSizePolicy(sizePolicy1)
+        self.pushButtonView.setMinimumSize(QSize(80, 0))
+        self.pushButtonView.setMaximumSize(QSize(80, 16777215))
+        self.pushButtonView.setStyleSheet(u"QPushButton{\n"
+"border:none;\n"
+"}\n"
+"QPushButton::menu-indicator{\n"
+"image:none;\n"
+"}")
 
-        self.horizontalLayout.addWidget(self.pushButton_4)
+        self.horizontalLayout.addWidget(self.pushButtonView)
 
-        self.pushButton_5 = QPushButton(self.menubar)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy1.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy1)
-        self.pushButton_5.setMinimumSize(QSize(80, 0))
-        self.pushButton_5.setMaximumSize(QSize(80, 16777215))
-        self.pushButton_5.setStyleSheet(u"border:none")
+        self.pushButtonHelp = QPushButton(self.menubar)
+        self.pushButtonHelp.setObjectName(u"pushButtonHelp")
+        sizePolicy1.setHeightForWidth(self.pushButtonHelp.sizePolicy().hasHeightForWidth())
+        self.pushButtonHelp.setSizePolicy(sizePolicy1)
+        self.pushButtonHelp.setMinimumSize(QSize(80, 0))
+        self.pushButtonHelp.setMaximumSize(QSize(80, 16777215))
+        self.pushButtonHelp.setStyleSheet(u"QPushButton{\n"
+"border:none;\n"
+"}\n"
+"QPushButton::menu-indicator{\n"
+"image:none;\n"
+"}")
 
-        self.horizontalLayout.addWidget(self.pushButton_5)
+        self.horizontalLayout.addWidget(self.pushButtonHelp)
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -539,7 +582,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.gridLayout = QGridLayout(self.mainArea)
-        self.gridLayout.setSpacing(0)
+        self.gridLayout.setSpacing(2)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.widget_4 = QWidget(self.mainArea)
@@ -547,7 +590,9 @@ class Ui_MainWindow(object):
         self.widget_4.setMinimumSize(QSize(0, 470))
         self.widget_4.setMaximumSize(QSize(16777215, 470))
         self.gridLayout_19 = QGridLayout(self.widget_4)
+        self.gridLayout_19.setSpacing(0)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.gridLayout_19.setContentsMargins(0, 0, 0, 0)
         self.graphicsView = QGraphicsView(self.widget_4)
         self.graphicsView.setObjectName(u"graphicsView")
         self.graphicsView.setMinimumSize(QSize(0, 470))
@@ -565,45 +610,91 @@ class Ui_MainWindow(object):
         self.frame_21.setMinimumSize(QSize(330, 316))
         self.frame_21.setMaximumSize(QSize(330, 316))
         self.gridLayout_14 = QGridLayout(self.frame_21)
+        self.gridLayout_14.setSpacing(0)
         self.gridLayout_14.setObjectName(u"gridLayout_14")
-        self.label_30 = QLabel(self.frame_21)
-        self.label_30.setObjectName(u"label_30")
-
-        self.gridLayout_14.addWidget(self.label_30, 0, 0, 1, 1)
-
-        self.lineEdit = QLineEdit(self.frame_21)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(138, 0))
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.gridLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.tableWidgetFiles = QTableWidget(self.frame_21)
+        if (self.tableWidgetFiles.columnCount() < 2):
+            self.tableWidgetFiles.setColumnCount(2)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidgetFiles.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidgetFiles.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        if (self.tableWidgetFiles.rowCount() < 1):
+            self.tableWidgetFiles.setRowCount(1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidgetFiles.setVerticalHeaderItem(0, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidgetFiles.setItem(0, 0, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidgetFiles.setItem(0, 1, __qtablewidgetitem4)
+        self.tableWidgetFiles.setObjectName(u"tableWidgetFiles")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.tableWidgetFiles.sizePolicy().hasHeightForWidth())
+        self.tableWidgetFiles.setSizePolicy(sizePolicy4)
+        self.tableWidgetFiles.setMinimumSize(QSize(0, 240))
+        self.tableWidgetFiles.setMaximumSize(QSize(16777215, 316))
+        self.tableWidgetFiles.setStyleSheet(u"QTableWidget{\n"
+"border:none;\n"
+"}\n"
+"/*\u8868\u5934*/\n"
+"QHeaderView::section{\n"
+"text-align:center;\n"
+"padding:3px;\n"
+"margin:0px;\n"
+"color:rgb(0, 0, 0);\n"
+"border:0px;\n"
+"border-left-width:0;\n"
+"}\n"
+"/*QTableView \u5de6\u4e0a\u89d2\u6837\u5f0f*/\n"
+"QTableView QTableCornerButton::section {\n"
+"padding:3px;\n"
+"margin:0px;\n"
+"color:rgb(0, 0, 0);\n"
+"border:0px;\n"
+"border-left-width:0;\n"
+"}\n"
+"\n"
+"QScrollBar::vertical {\n"
 "background:transparent;\n"
-"border-color:rgb(0, 0, 0);\n"
-"border-style:solid;\n"
-"border-top-width:0px;\n"
-"border-right-width:0px;\n"
-"border-bottom-width:1px;\n"
-"border-left-width:0px;\n"
+"width:8px;\n"
+"border:0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"background:#6eb1f0;\n"
+"width:8px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical {\n"
+"background:none;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:vertical {\n"
+"background:none;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical {\n"
+"background:transparent;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-page:vertical {\n"
+"background:transparent;\n"
+"border:none;\n"
 "}\n"
 "")
+        self.tableWidgetFiles.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.tableWidgetFiles.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tableWidgetFiles.setSortingEnabled(True)
+        self.tableWidgetFiles.horizontalHeader().setStretchLastSection(False)
+        self.tableWidgetFiles.verticalHeader().setStretchLastSection(False)
 
-        self.gridLayout_14.addWidget(self.lineEdit, 0, 1, 1, 1)
-
-        self.pushButton_6 = QPushButton(self.frame_21)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setMinimumSize(QSize(60, 26))
-        self.pushButton_6.setStyleSheet(u"border-radius:10px;\n"
-"background-color: rgb(22, 155, 213);\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_14.addWidget(self.pushButton_6, 0, 2, 1, 1)
-
-        self.listWidget = QListWidget(self.frame_21)
-        self.listWidget.setObjectName(u"listWidget")
-        self.listWidget.setMinimumSize(QSize(0, 240))
-        self.listWidget.setMaximumSize(QSize(16777215, 240))
-        self.listWidget.setStyleSheet(u"background-color: rgb(245, 245, 245);\n"
-"border:none;")
-
-        self.gridLayout_14.addWidget(self.listWidget, 1, 0, 1, 3)
+        self.gridLayout_14.addWidget(self.tableWidgetFiles, 0, 0, 1, 2)
 
 
         self.gridLayout.addWidget(self.frame_21, 0, 0, 1, 1)
@@ -972,18 +1063,22 @@ class Ui_MainWindow(object):
         self.tableWidget = QTableWidget(self.frame_5)
         if (self.tableWidget.columnCount() < 6):
             self.tableWidget.setColumnCount(6)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem10)
+        if (self.tableWidget.rowCount() < 1):
+            self.tableWidget.setRowCount(1)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem11)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setStyleSheet(u"QTableWidget{\n"
 "border:none;\n"
@@ -994,66 +1089,59 @@ class Ui_MainWindow(object):
 "padding:3px;\n"
 "margin:0px;\n"
 "color:rgb(0, 0, 0);\n"
-"border:1px solid #242424;\n"
+"border:0px;\n"
 "border-left-width:0;\n"
 "}\n"
-"/*\u8868\u53f3\u4fa7\u7684\u6ed1\u6761*/\n"
-"QScrollBar:horizental{\n"
-"background:#484848;\n"
-"padding:0px;\n"
-"border-radius:6px;\n"
-"max-width:12px;\n"
+"/*QTableView \u5de6\u4e0a\u89d2\u6837\u5f0f*/\n"
+"QTableView QTableCornerButton::section {\n"
+"padding:3px;\n"
+"margin:0px;\n"
+"color:rgb(0, 0, 0);\n"
+"border:0px;\n"
+"border-left-width:0;\n"
+"}\n"
+"QListWidget{\n"
+"background-color:#2F2F2F;\n"
+"color:white;\n"
+"border:none;\n"
 "}\n"
 "\n"
-"/*\u6ed1\u5757*/\n"
-"QScrollBar::handle:horizental{\n"
-"background:#CCCCCC;\n"
+"QScrollBar::vertical {\n"
+"background:transparent;\n"
+"width:8px;\n"
+"border:0px;\n"
 "}\n"
 "\n"
-"\n"
-"/*\u8868\u53f3\u4fa7\u7684\u6ed1\u6761*/\n"
-"QScrollBar:vertical{\n"
-"background:#484848;\n"
-"padding:0px;\n"
-"border-radius:6px;\n"
-"max-width:12px;\n"
+"QScrollBar::handle:vertical {\n"
+"background:#6eb1f0;\n"
+"width:8px;\n"
 "}\n"
 "\n"
-"/*\u6ed1\u5757*/\n"
-"QScrollBar::handle:vertical{\n"
-"background:#CCCCCC;\n"
-"}\n"
-"/*\n"
-"\u6ed1\u5757\u60ac\u6d6e\uff0c\u6309\u4e0b*/\n"
-"QScrollBar::handle:hover:vertical,QScrollBar::handle:pressed:vertical{\n"
-"background:#A7A7A7;\n"
-"}\n"
-"/*\n"
-"\u6ed1\u5757\u5df2\u7ecf\u5212\u8fc7\u7684\u533a\u57df*/\n"
-"QScrollBar::sub-page:vertical{\n"
-"background:444444;\n"
-""
-                        "}\n"
-"\n"
-"/*\n"
-"\u6ed1\u5757\u8fd8\u6ca1\u6709\u5212\u8fc7\u7684\u533a\u57df*/\n"
-"QScrollBar::add-page:vertical{\n"
-"background:5B5B5B;\n"
-"}\n"
-"\n"
-"/*\u9875\u9762\u4e0b\u79fb\u7684\u6309\u94ae*/\n"
-"QScrollBar::add-line:vertical{\n"
+"QScrollBar::add-line:vertical {\n"
 "background:none;\n"
+"border:none;\n"
 "}\n"
-"/*\u9875\u9762\u4e0a\u79fb\u7684\u6309\u94ae*/\n"
-"QScrollBar::sub-line:vertical{\n"
+"\n"
+"QScrollBar::sub-line:vertical {\n"
 "background:none;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical {\n"
+"background:transparent;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-page:vertical {\n"
+"background:transparent;\n"
+"border:none;"
+                        "\n"
 "}\n"
 "")
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setSortingEnabled(True)
         self.tableWidget.horizontalHeader().setVisible(True)
-        self.tableWidget.verticalHeader().setVisible(False)
+        self.tableWidget.verticalHeader().setVisible(True)
 
         self.gridLayout_18.addWidget(self.tableWidget, 1, 0, 1, 5)
 
@@ -1081,11 +1169,16 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u8bc4\u7247", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u914d\u7f6e", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u5177", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"\u89c6\u56fe", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"\u5e2e\u52a9", None))
+        self.actionOpen.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5f00", None))
+        self.actionOpenDatabase.setText(QCoreApplication.translate("MainWindow", u"\u4ece\u6570\u636e\u5e93\u6253\u5f00", None))
+        self.actionPrintPreview.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5370\u9884\u89c8", None))
+        self.actionPrintConfig.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5370\u8bbe\u7f6e", None))
+        self.actionCloudConnect.setText(QCoreApplication.translate("MainWindow", u"\u4e91\u7aef\u8fde\u63a5", None))
+        self.pushButtonFile.setText(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6", None))
+        self.pushButtonConfig.setText(QCoreApplication.translate("MainWindow", u"\u914d\u7f6e", None))
+        self.pushButtonTools.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u5177", None))
+        self.pushButtonView.setText(QCoreApplication.translate("MainWindow", u"\u89c6\u56fe", None))
+        self.pushButtonHelp.setText(QCoreApplication.translate("MainWindow", u"\u5e2e\u52a9", None))
         self.label_5.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u91cd\u590d\u7247\u68c0\u7d22", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u81ea\u52a8\u8bc6\u522b", None))
@@ -1115,8 +1208,21 @@ class Ui_MainWindow(object):
         self.label_27.setText("")
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"\u5c40\u90e8\u8c03\u6574", None))
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"\u56fe\u50cf\u589e\u5f3a", None))
-        self.label_30.setText(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6\u4f4d\u7f6e", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5f00", None))
+        ___qtablewidgetitem = self.tableWidgetFiles.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u540d\u79f0", None));
+        ___qtablewidgetitem1 = self.tableWidgetFiles.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u8def\u5f84", None));
+        ___qtablewidgetitem2 = self.tableWidgetFiles.verticalHeaderItem(0)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"1", None));
+
+        __sortingEnabled = self.tableWidgetFiles.isSortingEnabled()
+        self.tableWidgetFiles.setSortingEnabled(False)
+        ___qtablewidgetitem3 = self.tableWidgetFiles.item(0, 0)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"picture_name", None));
+        ___qtablewidgetitem4 = self.tableWidgetFiles.item(0, 1)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"X:/xxxx/xxxx/xxxxxx/picture_name.mim", None));
+        self.tableWidgetFiles.setSortingEnabled(__sortingEnabled)
+
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"\u4ea7\u54c1\u7f16\u53f7", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"\u90e8\u4f4d\u7f16\u53f7", None))
         self.label_39.setText(QCoreApplication.translate("MainWindow", u"\u6267\u884c\u6807\u51c6", None))
@@ -1139,17 +1245,19 @@ class Ui_MainWindow(object):
         self.comboBox_7.setItemText(0, QCoreApplication.translate("MainWindow", u"\u5426", None))
         self.comboBox_7.setItemText(1, QCoreApplication.translate("MainWindow", u"\u662f", None))
 
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u7f16\u53f7", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u7c7b\u578b", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"\u5bbd\u5ea6", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"\u957f\u5ea6", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"\u5b9a\u91cf", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"\u5904\u7406", None));
+        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"\u7f16\u53f7", None));
+        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"\u7c7b\u578b", None));
+        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"\u5bbd\u5ea6", None));
+        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"\u957f\u5ea6", None));
+        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"\u5b9a\u91cf", None));
+        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"\u5904\u7406", None));
+        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"1", None));
     # retranslateUi
 

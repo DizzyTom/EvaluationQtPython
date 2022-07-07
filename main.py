@@ -1,6 +1,4 @@
 from PySide6.QtWidgets import QApplication
-import PySide6
-import os
 from modules.main import MainWindow
 
 # Main Program
