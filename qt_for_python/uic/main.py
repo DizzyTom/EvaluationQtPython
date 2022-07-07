@@ -17,10 +17,12 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QComboBox, QFrame,
-    QGraphicsView, QGridLayout, QHBoxLayout, QHeaderView,
-    QLabel, QLineEdit, QMainWindow, QPushButton,
-    QScrollArea, QSizePolicy, QSpacerItem, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QScrollArea,
+    QSizePolicy, QSpacerItem, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
+
+from utils import ImageViewer
 import resource_rc
 
 class Ui_MainWindow(object):
@@ -568,6 +570,15 @@ class Ui_MainWindow(object):
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
+        self.gridLayout_20 = QGridLayout(self.frame_2)
+        self.gridLayout_20.setObjectName(u"gridLayout_20")
+        self.label_30 = QLabel(self.frame_2)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setStyleSheet(u"image: url(:/icons/res/icons/logo.png);\n"
+"background-color: rgb(22, 78, 134);")
+
+        self.gridLayout_20.addWidget(self.label_30, 0, 0, 1, 1)
+
 
         self.horizontalLayout_2.addWidget(self.frame_2)
 
@@ -593,7 +604,7 @@ class Ui_MainWindow(object):
         self.gridLayout_19.setSpacing(0)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.gridLayout_19.setContentsMargins(0, 0, 0, 0)
-        self.graphicsView = QGraphicsView(self.widget_4)
+        self.graphicsView = ImageViewer(self.widget_4)
         self.graphicsView.setObjectName(u"graphicsView")
         self.graphicsView.setMinimumSize(QSize(0, 470))
         self.graphicsView.setMaximumSize(QSize(16777215, 470))
@@ -1208,6 +1219,7 @@ class Ui_MainWindow(object):
         self.label_27.setText("")
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"\u5c40\u90e8\u8c03\u6574", None))
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"\u56fe\u50cf\u589e\u5f3a", None))
+        self.label_30.setText("")
         ___qtablewidgetitem = self.tableWidgetFiles.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u540d\u79f0", None));
         ___qtablewidgetitem1 = self.tableWidgetFiles.horizontalHeaderItem(1)

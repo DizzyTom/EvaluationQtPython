@@ -114,184 +114,184 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1462"/>
+        <location filename="../../res/UI/main.ui" line="1475"/>
         <source>X:/xxxx/xxxx/xxxxxx/picture_name.mim</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1747"/>
-        <location filename="../../res/UI/main.ui" line="2214"/>
+        <location filename="../../res/UI/main.ui" line="1760"/>
+        <location filename="../../res/UI/main.ui" line="2227"/>
         <source>打开</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1442"/>
-        <location filename="../../res/UI/main.ui" line="2146"/>
+        <location filename="../../res/UI/main.ui" line="1455"/>
+        <location filename="../../res/UI/main.ui" line="2159"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1447"/>
+        <location filename="../../res/UI/main.ui" line="1460"/>
         <source>名称</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1452"/>
+        <location filename="../../res/UI/main.ui" line="1465"/>
         <source>路径</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1457"/>
+        <location filename="../../res/UI/main.ui" line="1470"/>
         <source>picture_name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1504"/>
+        <location filename="../../res/UI/main.ui" line="1517"/>
         <source>产品编号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1571"/>
+        <location filename="../../res/UI/main.ui" line="1584"/>
         <source>部位编号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1578"/>
+        <location filename="../../res/UI/main.ui" line="1591"/>
         <source>执行标准</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1585"/>
+        <location filename="../../res/UI/main.ui" line="1598"/>
         <source>焊接接头编号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1592"/>
+        <location filename="../../res/UI/main.ui" line="1605"/>
         <source>底片信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1599"/>
+        <location filename="../../res/UI/main.ui" line="1612"/>
         <source>拍摄级别</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1606"/>
+        <location filename="../../res/UI/main.ui" line="1619"/>
         <source>透照日期</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1723"/>
+        <location filename="../../res/UI/main.ui" line="1736"/>
         <source>保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1793"/>
+        <location filename="../../res/UI/main.ui" line="1806"/>
         <source>底片等级</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1857"/>
+        <location filename="../../res/UI/main.ui" line="1870"/>
         <source>标记齐全</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1878"/>
+        <location filename="../../res/UI/main.ui" line="1891"/>
         <source>重置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1907"/>
+        <location filename="../../res/UI/main.ui" line="1920"/>
         <source>缺陷性质</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1940"/>
+        <location filename="../../res/UI/main.ui" line="1953"/>
         <source>缺陷检测</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1964"/>
+        <location filename="../../res/UI/main.ui" line="1977"/>
         <source>缺陷自动定位</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="1988"/>
+        <location filename="../../res/UI/main.ui" line="2001"/>
         <source>缺陷手动定位</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2004"/>
+        <location filename="../../res/UI/main.ui" line="2017"/>
         <source>评片备注</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2020"/>
+        <location filename="../../res/UI/main.ui" line="2033"/>
         <source>评定标准</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2041"/>
+        <location filename="../../res/UI/main.ui" line="2054"/>
         <source>评定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2061"/>
+        <location filename="../../res/UI/main.ui" line="2074"/>
         <source>否</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2066"/>
+        <location filename="../../res/UI/main.ui" line="2079"/>
         <source>是</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2151"/>
+        <location filename="../../res/UI/main.ui" line="2164"/>
         <source>编号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2156"/>
+        <location filename="../../res/UI/main.ui" line="2169"/>
         <source>类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2161"/>
+        <location filename="../../res/UI/main.ui" line="2174"/>
         <source>宽度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2166"/>
+        <location filename="../../res/UI/main.ui" line="2179"/>
         <source>长度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2171"/>
+        <location filename="../../res/UI/main.ui" line="2184"/>
         <source>定量</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2176"/>
+        <location filename="../../res/UI/main.ui" line="2189"/>
         <source>处理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2219"/>
+        <location filename="../../res/UI/main.ui" line="2232"/>
         <source>从数据库打开</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2224"/>
+        <location filename="../../res/UI/main.ui" line="2237"/>
         <source>打印预览</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2229"/>
+        <location filename="../../res/UI/main.ui" line="2242"/>
         <source>打印设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../res/UI/main.ui" line="2238"/>
+        <location filename="../../res/UI/main.ui" line="2251"/>
         <source>云端连接</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1235,6 +1235,19 @@ QWidget{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QGridLayout" name="gridLayout_20">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_30">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/res/icons/logo.png);
+background-color: rgb(22, 78, 134);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -1296,7 +1309,7 @@ background-color: rgb(255, 255, 255);
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QGraphicsView" name="graphicsView">
+           <widget class="ImageViewer" name="graphicsView">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -2239,6 +2252,13 @@ border:none;
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageViewer</class>
+   <extends>QGraphicsView</extends>
+   <header>utils</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../../resource.qrc"/>
  </resources>

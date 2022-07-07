@@ -3,9 +3,9 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import QModelIndex
 from PySide6.QtGui import QPixmap
 from qt_for_python.uic.main import Ui_MainWindow
-from .utils import getFilesWithSubffix,tiff_force_8bit
+from utils import getFilesWithSubffix,tiff_force_8bit
 import os
-from PIL import Image,ImageQt
+from PIL import Image
 
 # Main Window Class
 
@@ -84,13 +84,5 @@ class MainWindow(QMainWindow):
             QMessageBox(QMessageBox.Critical, '错误', '文件不存在').exec()
             return
         image=tiff_force_8bit(Image.open(path))
-        self.showImage(image)
-
-    def showImage(self,image):        
-        frame = ImageQt.ImageQt(image)
-        pix = QPixmap.fromImage(frame)
-        item = QGraphicsPixmapItem(pix)
-        scene=QGraphicsScene()
-        scene.addItem(item)
-        self.ui.graphicsView.setScene(scene)
+        self.ui.graphicsView.setImage(image)
 
