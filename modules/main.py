@@ -267,7 +267,7 @@ class MainWindow(QMainWindow):
         if len(rowList) != 1:
             QMessageBox.warning(self, "提示", "请选择一行数据修改")
             return
-        data = {}
+        
         row = rowList[0]
         _id = self.ui.tableWidgetTasks.item(row, self.tableHeaderTasks.index("id")).text()
         dlg = ModifyTaskDialog(id=int(_id))
