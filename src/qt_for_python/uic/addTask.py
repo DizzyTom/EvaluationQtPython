@@ -75,6 +75,9 @@ class Ui_Dialog(object):
 
         self.frame = QFrame(Dialog)
         self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"#frame{\n"
+"border:none;\n"
+"}")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame)
@@ -94,6 +97,7 @@ class Ui_Dialog(object):
 
 
         self.retranslateUi(Dialog)
+        self.quitBtn.clicked.connect(Dialog.close)
 
         QMetaObject.connectSlotsByName(Dialog)
     # setupUi

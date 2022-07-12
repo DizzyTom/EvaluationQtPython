@@ -62,6 +62,11 @@
    </item>
    <item row="0" column="1">
     <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">#frame{
+border:none;
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -89,5 +94,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>quitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

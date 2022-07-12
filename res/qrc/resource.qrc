@@ -1,0 +1,46 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/DownArrow.png</file>
+    <file>images/IP.png</file>
+    <file>images/logo.png</file>
+    <file>images/边界显示资源 21.png</file>
+    <file>images/垂直测量资源 12.png</file>
+    <file>images/打开.png</file>
+    <file>images/点击.png</file>
+    <file>images/端口配置.png</file>
+    <file>images/多点画边界资源 22.png</file>
+    <file>images/放大资源 2.png</file>
+    <file>images/功能退出资源 20.png</file>
+    <file>images/关闭.png</file>
+    <file>images/灰度曲线增强资源 26.png</file>
+    <file>images/恢复原始曲线资源 27.png</file>
+    <file>images/计算机.png</file>
+    <file>images/局部放大资源 6.png</file>
+    <file>images/局部增强资源 28.png</file>
+    <file>images/连续画边界资源 23.png</file>
+    <file>images/密度评定10资源 16.png</file>
+    <file>images/密度评定20资源 17.png</file>
+    <file>images/密度评定30资源 18.png</file>
+    <file>images/密度评定资源 19.png</file>
+    <file>images/密码.png</file>
+    <file>images/倾侧测量资源 13.png</file>
+    <file>images/缺陷手动定位资源 9.png</file>
+    <file>images/任务获取资源 1.png</file>
+    <file>images/上下翻转资源 8.png</file>
+    <file>images/适应屏幕资源 5.png</file>
+    <file>images/水平测量资源 11.png</file>
+    <file>images/缩小资源 3.png</file>
+    <file>images/伪色彩增强资源 25.png</file>
+    <file>images/文字识别资源 29.png</file>
+    <file>images/信息标记资源 10.png</file>
+    <file>images/一键增强资源 24.png</file>
+    <file>images/移动资源 14.png</file>
+    <file>images/用户.png</file>
+    <file>images/原图大小资源 4.png</file>
+    <file>images/云端.png</file>
+    <file>images/中心标记资源 15.png</file>
+    <file>images/重复片检索.png</file>
+    <file>images/主页.png</file>
+    <file>images/左右翻转资源 7.png</file>
+  </qresource>
+</RCC>
