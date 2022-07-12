@@ -18,6 +18,17 @@ class Const:
     searchTask_url="ScanTask/SearchTask/"
     getTaskInfo_url="ScanTask/GetTaskInfo/"
     searchFilms_url="ScanTask/SearchFilms/"
+    addFilm_url="ScanTask/AddFilm/"
+    delFilm_url="ScanTask/DelFilm/"
+    searchFilms_url="ScanTask/SearchFilms/"
+    uploadFilm_url="ScanTask/UploadFilm/"
+    downloadFilm_url="ScanTask/DownloadFilm/"
+    # standards
+    # IP地址规范
+    ipRange = "([0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])"
+    # 端口 0~65535
+    portRange = "([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-5][0-9][0-9][0-9][0-9]|6[0-4][0-9][0-9][0-9]|65[0-4][0-9][0-9]|655[0-2][0-9]|6553[0-5])"
+    
 
 class WebConnect:
     def __init__(self) -> None:

@@ -1,5 +1,6 @@
-from PySide6.QtWidgets import QMainWindow,QFileDialog,QTableWidgetItem
+from PySide6.QtWidgets import QMainWindow,QFileDialog,QTableWidgetItem,QTableWidget
 from qt_for_python.uic.main import Ui_MainWindow
+from utils.utils_qt.utils_qt import MyMessageBox
 from .tasks import TasksWindow
 from .utils import getFilesWithSubffix,tiff_force_8bit
 from PIL import Image
@@ -18,26 +19,27 @@ class MainWindow(QMainWindow):
         self.ui.imageSplitter.setStretchFactor(1,1)
         self.ui.mainSplitter.setStretchFactor(1,1)
         self.menuList=[
-            self.ui.taskbutton,
-            self.ui.judgebutton,
-            self.ui.recordbutton,
-            self.ui.configbutton,
+            self.ui.startbutton,
             self.ui.viewbutton,
             self.ui.helpbutton,
         ]
-        self.ui.taskbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.taskpage))
-        self.ui.judgebutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.judgepage))
-        self.ui.recordbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.recordpage))
-        self.ui.configbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.configpage))
+        self.ui.startbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.startpage))
         self.ui.viewbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.viewpage))
         self.ui.helpbutton.clicked.connect(lambda:self.ui.tools.setCurrentWidget(self.ui.helppage))
         for bt in self.menuList:
             bt.clicked.connect(self.resetMenu)
-        self.ui.taskbutton.click()
+        self.ui.startbutton.click()
 
     def setSubWindows(self):
         self.taskWindow=TasksWindow()
         self.ui.taskManage.clicked.connect(lambda:self.taskWindow.exec())
+        self.taskWindow.sendSignal.connect(self.ui.tableWidgetFiles.setScanTaskID)
+        self.taskWindow.sendSignal.connect(lambda:self.setFilmInfo())
+        self.ui.addFilm.clicked.connect(self.ui.tableWidgetFiles.addFilm)
+        self.ui.delFilm.clicked.connect(self.ui.tableWidgetFiles.delFilm)
+        self.ui.syncFilm.clicked.connect(self.ui.tableWidgetFiles.syncFilm)
+
+        self.ui.tableWidgetFiles.doubleClicked.connect(self.setImage)
     
     def resetMenu(self):
         for bt in self.menuList:
@@ -45,7 +47,36 @@ class MainWindow(QMainWindow):
                 bt.setProperty('select',True)
             else:
                 bt.setProperty('select',False)
-            self.ui.centralwidget.style().polish(bt)
+            self.ui.menubar.style().polish(bt)
 
-    
-    
+    def setFilmInfo(self):
+        row=self.taskWindow.ui.tableWidget.currentRow()
+        taskname=self.taskWindow.ui.tableWidget.item(row,self.taskWindow.tableHeader.index('TASKNAME')).text()
+        qyname=self.taskWindow.ui.tableWidget.item(row,self.taskWindow.tableHeader.index('QYNAME')).text()
+        tasknum=self.taskWindow.ui.tableWidget.item(row,self.taskWindow.tableHeader.index('TASKNUM')).text()
+        createtime=self.taskWindow.ui.tableWidget.item(row,self.taskWindow.tableHeader.index('CREATETIME')).text()
+        self.ui.taskName.setText(taskname)
+        self.ui.companyName.setText(qyname)
+        self.ui.taskNum.setText(tasknum)
+        self.ui.createTime.setText(createtime)
+
+    def setImage(self):
+        row=self.ui.tableWidgetFiles.currentRow()
+        filePath=self.ui.tableWidgetFiles.item(row,self.ui.tableWidgetFiles.tableHeader.index('FILMLJ')).text()
+        if not os.path.exists(filePath):
+            box=MyMessageBox(self)
+            box.setIcon(MyMessageBox.Information)
+            box.setWindowTitle('提示')
+            box.setText('无效路径,请同步底片')
+            box.exec()
+            return 
+        try:
+            image=Image.open(filePath)
+        except Exception as e:
+            box=MyMessageBox(self)
+            box.setIcon(MyMessageBox.Information)
+            box.setWindowTitle('提示')
+            box.setText('图像损坏,请重新同步底片')
+            box.exec()
+            return
+        self.ui.image.setImage(tiff_force_8bit(image))

@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/评价.png</file>
+    <file>images/记录.png</file>
+    <file>images/加载中.png</file>
+    <file>images/多记录.png</file>
+    <file>images/亮度调节.png</file>
+    <file>images/任务管理.png</file>
     <file>images/DownArrow.png</file>
     <file>images/IP.png</file>
     <file>images/logo.png</file>

@@ -233,7 +233,7 @@ QLineEdit:focus{
 }
 QTableWidget::item
 {
-    color:rgba(0,0,0,150);
+    color:rgb(0,0,0);
     background: #FFFFFF;
     text-align:center;
 }

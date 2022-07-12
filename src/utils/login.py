@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
-from PySide6.QtCore import Qt, QRegularExpression,Signal
-from PySide6.QtGui import QPainter, QRegularExpressionValidator
+from PySide6.QtCore import Qt, Signal,QRegularExpression
+from PySide6.QtGui import QPainter,QRegularExpressionValidator
 from win32gui import ReleaseCapture
 from win32api import SendMessage
 import win32con
@@ -8,10 +8,11 @@ from qt_for_python.uic.login import Ui_Form
 from utils.utils import webConnect,Const,encodeGBK
 from utils.utils_qt.utils_qt import MyMessageBox
 import requests
+from .utils import Const
 
 
 class LoginWindow(QWidget):
-    login_signal=Signal()
+    login_signal=Signal(int)
     def __init__(self, parent=None, radius=10):
         super().__init__(parent)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -21,16 +22,11 @@ class LoginWindow(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
-        # IP地址规范
-        ipRange = "([0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])"
-        ipRegex = QRegularExpression(
-            "^" + ipRange + "\\." + ipRange + "\\." + ipRange + "\\." + ipRange + "$")
+        ipRegex = QRegularExpression("^" + Const.ipRange + "\\." + Const.ipRange + "\\." + Const.ipRange + "\\." + Const.ipRange + "$")
         ipValidator = QRegularExpressionValidator(ipRegex, self)
         self.ui.ip.setValidator(ipValidator)
 
-        # 端口 0~65535
-        portRange = "([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-5][0-9][0-9][0-9][0-9]|6[0-4][0-9][0-9][0-9]|65[0-4][0-9][0-9]|655[0-2][0-9]|6553[0-5])"
-        portRegex=QRegularExpression("^"+portRange+"$")
+        portRegex=QRegularExpression("^"+Const.portRange+"$")
         portValidator=QRegularExpressionValidator(portRegex,self)
         self.ui.port.setValidator(portValidator)
 
@@ -38,7 +34,7 @@ class LoginWindow(QWidget):
         ip,port=webConnect.getIP_Port()
         self.ui.ip.setText(ip)
         self.ui.port.setText(port)
-
+        self.ui.name.setFocus()
         # 点击退出按钮关闭
         self.ui.quit.clicked.connect(self.close)
 
@@ -46,7 +42,8 @@ class LoginWindow(QWidget):
         self.ui.login.clicked.connect(self.try_connect)
         
         self.ui.login.setShortcut('enter')
-        self.ui.quit.setShortcut('esc')
+        self.ui.quit.setShortcut('esc')    
+        
 
     def paintEvent(self, event):
         painter = QPainter(self)
@@ -71,7 +68,7 @@ class LoginWindow(QWidget):
         data.setdefault('yhmm',self.ui.password.text())
         ret=requests.post(url,encodeGBK(data)).json()
         if ret['ret']==1:
-            self.login_signal.emit()
+            self.login_signal.emit(1)
             self.close()
         else:
             messageBox=MyMessageBox(self)

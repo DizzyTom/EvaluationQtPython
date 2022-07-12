@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QDialog, QTableWidgetItem, QMessageBox,QLineEdit,QPushButton
-from PySide6.QtCore import QDateTime,QModelIndex,QLocale
+from PySide6.QtCore import QDateTime,QModelIndex,QLocale,Signal
 from qt_for_python.uic.tasks import Ui_Dialog as Main_Dialog
 from qt_for_python.uic.addTask import Ui_Dialog as Sub_Dialog
 import requests
@@ -90,6 +90,7 @@ class ModifyTaskDialog(QDialog):
         requests.post(webConnect.getUrl(Const.changeTask_url),data=data)
         return super().accept()
 class TasksWindow(QDialog):
+    sendSignal=Signal(str,str,str)
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Main_Dialog()
@@ -101,13 +102,15 @@ class TasksWindow(QDialog):
 
         self.addHeader()
         self.freshContent()
-
+        
         self.ui.addTask.clicked.connect(self.inputTask)
         self.ui.deleteTask.clicked.connect(self.deleteTask)
         self.ui.modifyTask.clicked.connect(self.changeTask)
         self.ui.searchTask.clicked.connect(self.freshContent)
-
         self.ui.tableWidget.doubleClicked.connect(self.accept)
+        self.ui.tableWidget.doubleClicked.connect(self.sendInfo)
+
+        
 
     def addHeader(self):
         self.tableHeader = [
@@ -134,7 +137,7 @@ class TasksWindow(QDialog):
         ]
         self.ui.tableWidget.setColumnCount(len(self.tableHeaderName))
         self.ui.tableWidget.setHorizontalHeaderLabels(self.tableHeaderName)
-        # self.ui.tableWidget.setColumnHidden(self.tableHeader.index("id"),True)
+        self.ui.tableWidget.setColumnHidden(self.tableHeader.index("id"),True)
 
     def freshContent(self):
         # self.ui.tableWidget.clearContents()
@@ -253,4 +256,11 @@ class TasksWindow(QDialog):
         dlg.accepted.connect(self.freshContent)
         dlg.exec()
         # requests.post(webConnect.getUrl(Const.changeTask),data=data).json()
+    
+    def sendInfo(self):
+        row=self.ui.tableWidget.currentRow()
+        _id=self.ui.tableWidget.item(row,self.tableHeader.index('id')).text()
+        _taskname=self.ui.tableWidget.item(row,self.tableHeader.index('TASKNAME')).text()
+        _qyname=self.ui.tableWidget.item(row,self.tableHeader.index('QYNAME')).text()
+        self.sendSignal.emit(_id,_taskname,_qyname)
 
