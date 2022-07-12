@@ -1,9 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Qt, Signal,QRegularExpression
 from PySide6.QtGui import QPainter,QRegularExpressionValidator
-from win32gui import ReleaseCapture
-from win32api import SendMessage
-import win32con
 from qt_for_python.uic.login import Ui_Form
 from utils.utils import webConnect,Const,encodeGBK
 from utils.utils_qt.utils_qt import MyMessageBox
@@ -53,11 +50,16 @@ class LoginWindow(QWidget):
         painter.drawRoundedRect(self.rect(), self.radius, self.radius)
         event.accept()
 
+    def mousePressEvent(self, event):
+        self.record_p=self.cursor().pos()
+        self.record_w=self.window().pos()
+        return super().mousePressEvent(event)
+
     def mouseMoveEvent(self, event):
-        ReleaseCapture()
-        SendMessage(self.window().winId(), win32con.WM_SYSCOMMAND,
-                    win32con.SC_MOVE + win32con.HTCAPTION, 0)
-        event.ignore()
+        self.now_p=self.cursor().pos()
+        dst=self.record_w+self.now_p-self.record_p
+        self.move(dst)
+        return super().mouseMoveEvent(event)
 
     def try_connect(self):
         # 保存ip port

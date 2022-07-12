@@ -1,8 +1,8 @@
-from PySide6.QtWidgets import QMainWindow,QFileDialog,QTableWidgetItem,QTableWidget
+from PySide6.QtWidgets import QMainWindow
 from qt_for_python.uic.main import Ui_MainWindow
 from utils.utils_qt.utils_qt import MyMessageBox
 from .tasks import TasksWindow
-from .utils import getFilesWithSubffix,tiff_force_8bit
+from .utils import tiff_force_8bit
 from PIL import Image
 import os
 

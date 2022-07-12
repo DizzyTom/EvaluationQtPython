@@ -2,7 +2,7 @@ from PySide6.QtCore import QRectF, QSize, Qt
 from PySide6.QtGui import QPainter, QPixmap, QWheelEvent
 from PySide6.QtWidgets import (QGraphicsItem, QGraphicsPixmapItem,
                              QGraphicsScene, QGraphicsView)
-from PIL import Image,ImageQt
+from PIL import ImageQt
 
 # 代码参考：https://www.cnblogs.com/zhiyiYo/p/15676079.html
 class ImageViewer(QGraphicsView):

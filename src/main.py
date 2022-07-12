@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import QApplication
 from utils.login import LoginWindow
 from utils.main import MainWindow
-from utils.utils_qt.utils_qt import LoadingWindow
 
 if __name__=='__main__':
     app=QApplication([])

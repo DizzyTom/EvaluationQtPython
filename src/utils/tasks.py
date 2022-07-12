@@ -1,5 +1,5 @@
-from PySide6.QtWidgets import QDialog, QTableWidgetItem, QMessageBox,QLineEdit,QPushButton
-from PySide6.QtCore import QDateTime,QModelIndex,QLocale,Signal
+from PySide6.QtWidgets import QDialog, QTableWidgetItem,QLineEdit,QPushButton
+from PySide6.QtCore import QDateTime,Signal
 from qt_for_python.uic.tasks import Ui_Dialog as Main_Dialog
 from qt_for_python.uic.addTask import Ui_Dialog as Sub_Dialog
 import requests

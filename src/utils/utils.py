@@ -1,5 +1,4 @@
 import json
-from typing import Dict,List
 import os
 import numpy as np
 from PIL import Image
@@ -52,13 +51,13 @@ class WebConnect:
         self.port=port
 webConnect=WebConnect()
 
-def encodeGBK(x:Dict[str,str]):
+def encodeGBK(x):
     for k,v in x.items():
         x[k]=v.encode("GBK")
     return x
 
 
-def getFilesWithSubffix(rootpath,subffixs)->List:
+def getFilesWithSubffix(rootpath,subffixs):
     fileList=os.listdir(rootpath)
     ans=[]
     for file in fileList:

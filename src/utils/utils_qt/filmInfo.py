@@ -1,5 +1,5 @@
-from PySide6.QtWidgets import QTableWidget,QFileDialog,QTableWidgetItem,QMainWindow,QPushButton
-from PySide6.QtCore import QThread,Signal,Qt
+from PySide6.QtWidgets import QTableWidget,QFileDialog,QTableWidgetItem,QPushButton
+from PySide6.QtCore import QThread,Signal
 import requests
 from ..utils import Const,webConnect,encodeGBK
 from .utils_qt import MyMessageBox,LoadingWindow

@@ -1,6 +1,5 @@
-from PySide6.QtWidgets import QMessageBox,QSplitter,QMainWindow,QWidget
+from PySide6.QtWidgets import QMessageBox,QMainWindow,QWidget
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QMovie
 from qt_for_python.uic.loading import Ui_MainWindow
 import resource_rc
 
