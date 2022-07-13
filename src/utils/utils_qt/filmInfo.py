@@ -65,7 +65,7 @@ class FilmInfo(QTableWidget):
         self.setHorizontalHeaderLabels(self.tableHeaderName)
         # self.setColumnHidden(self.tableHeader.index('id'),True)
         self._window=LoadingWindow(self)
-        self._window.close()
+        self._window.hide()
     
     def resizeEvent(self,event):        
         self._window.reShape()
@@ -168,11 +168,19 @@ class FilmInfo(QTableWidget):
 
     def syncFilm(self):
         # self.window().setWindowModality(Qt.ApplicationModal)
+        contents = self.selectedItems()
+        rowList = []
+        for item in contents:
+            if item.row() in rowList:
+                continue
+            rowList.append(item.row())
+        if len(rowList)==0:
+            return
         self._window.show()
         rows=self.rowCount()
         _ids=[]
         _filmljs=[]
-        for i in range(rows):
+        for i in rowList:
             _id=self.item(i,self.tableHeader.index('id')).text()  
             _filmlj=self.item(i,self.tableHeader.index('FILMLJ')).text()
             if not os.path.exists(os.path.dirname(_filmlj)):
@@ -187,10 +195,10 @@ class FilmInfo(QTableWidget):
     def downloadFinish(self,now,tot):
         if now==-1:
             self.thread_download.exit()
-            self._window.close()
+            self._window.hide()
         if now==tot:
             self._window.ui.label_2.setText("加载完毕")
             # self.window().setWindowModality(Qt.NonModal)
-            self._window.close()
+            self._window.hide()
         else:
             self._window.ui.label_2.setText("加载中,第{}个,共{}个".format(now,tot))

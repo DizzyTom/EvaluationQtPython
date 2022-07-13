@@ -76,7 +76,7 @@ class MainWindow(QMainWindow):
             box=MyMessageBox(self)
             box.setIcon(MyMessageBox.Information)
             box.setWindowTitle('提示')
-            box.setText('图像损坏,请重新同步底片')
+            box.setText('服务器中该图像损坏,请联系管理员后重新同步底片')
             box.exec()
             return
         self.ui.image.setImage(tiff_force_8bit(image))
